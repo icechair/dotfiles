@@ -1,13 +1,18 @@
-confdir=$HOME/.config
-
-fpath=(~/.config/zsh/completions $fpath)
-# Source manjaro-zsh-configuration
-if [[ -e $confdir/zsh/manjaro-zsh-config ]]; then
-  source $confdir/zsh/manjaro-zsh-config
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-powerline-daemon -q
-. /usr/share/powerline/bindings/zsh/powerline.zsh
 
+zshconf="${XDG_CONF_DIR:-$HOME/.config}/zsh"
+
+fpath=($zshconf/completions $fpath)
+# Source manjaro-zsh-configuration
+if [[ -e $zshconf/manjaro-zsh-config ]]; then
+  source $zshconf/manjaro-zsh-config
+fi
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 alias vim=nvim
 alias vi=nvim
 alias vimdiff=nvim -d
@@ -35,3 +40,6 @@ PICO_EXTRAS_PATH=$HOME/pico/pico-playground
 
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 compdef _git dotfiles
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f $zshconf/p10k.zsh ]] || source $zshconf/p10k.zsh
