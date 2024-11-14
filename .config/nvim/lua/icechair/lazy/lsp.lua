@@ -8,6 +8,14 @@ return {
     },
 
     config = function()
+        vim.api.nvim_create_autocmd("LspAttach", {
+            group = vim.api.nvim_create_augroup("icechair-lsp-attach", { clear = true }),
+            callback = function(event)
+                local map = function(keys, func, desc)
+                    vim.keymap.set("n", keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+                end
+            end,
+        })
         local cmp_lsp = require("cmp_nvim_lsp")
 
         local capabilities = vim.tbl_deep_extend(
