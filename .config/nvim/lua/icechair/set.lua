@@ -1,5 +1,5 @@
-vim.opt.guicursor = ""
-vim.opt.mouse = ""
+vim.opt.guicursor = ''
+vim.opt.mouse = ''
 
 -- indentation
 vim.opt.tabstop = 4
@@ -12,7 +12,7 @@ vim.opt.breakindent = true
 -- history
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undodir = os.getenv 'HOME' .. '/.vim/undodir'
 vim.opt.undofile = true
 
 -- whitespaces
@@ -26,8 +26,8 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 -- signs in number column?
-vim.opt.signcolumn = "number"
-vim.opt.colorcolumn = "100"
+vim.opt.signcolumn = 'number'
+vim.opt.colorcolumn = '100'
 vim.opt.cursorline = true
 
 -- update time/sequence times

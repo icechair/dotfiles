@@ -1,12 +1,15 @@
 -- <leader> to <space>
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 -- open directory of active buffer
-vim.keymap.set("n", "<leader>fq", vim.cmd.Ex)
+vim.keymap.set('n', '<leader>fq', vim.cmd.Ex)
 
+-- toggle whitespaces
 vim.keymap.set('n', '<leader>b', function()
-    vim.o.list = not vim.o.list
+  vim.o.list = not vim.o.list
 end, { desc = 'toggle whitespaces' })
+-- clear on pressing <Esc> in normal mode
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })

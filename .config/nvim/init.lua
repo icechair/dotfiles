@@ -1,1 +1,1 @@
-require("icechair")
+require 'icechair'
