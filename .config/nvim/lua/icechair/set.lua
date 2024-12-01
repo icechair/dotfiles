@@ -16,7 +16,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 -- whitespaces
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars = { space = '␣', tab = '» ', trail = '·', nbsp = '‿', eol = '⮠' }
 
 -- truecolor
@@ -38,3 +38,7 @@ vim.opt.timeoutlen = 300
 vim.opt.scrolloff = 10
 -- reload buffer on external change?
 vim.opt.autoread = true
+
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
