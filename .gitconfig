@@ -1,7 +1,7 @@
+[include]
+    path = ~/.gitconfig-global
 [includeIf "gitdir:~/Projects/work/"]
     path = ~/.gitconfig-work
-[includeIf "gitdir:~/Projects/oss/"]
-    path = ~/.gitconfig-oss
 [init]
 	defaultBranch = master
 [difftool]
@@ -28,7 +28,7 @@
     di =!"d() { git diff -w --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
     p = git pull
     c = clone --recursive
-    ca = !git add -A && git commit -av
+    cc = commit -av
     cm = commit -m
     tags = tag -l
     branches = branch -a

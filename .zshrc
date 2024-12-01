@@ -1,21 +1,16 @@
 confdir=$HOME/.config
 
 fpath=(~/.config/zsh/completions $fpath)
-# Use powerline
-USE_POWERLINE="true"
 # Source manjaro-zsh-configuration
 if [[ -e $confdir/zsh/manjaro-zsh-config ]]; then
   source $confdir/zsh/manjaro-zsh-config
 fi
-bindkey -e
-
-# Use manjaro zsh prompt
-if [[ -e $confdir/zsh/manjaro-zsh-prompt ]]; then
-  source $confdir/zsh/manjaro-zsh-prompt
-fi
+powerline-daemon -q
+. /usr/share/powerline/bindings/zsh/powerline.zsh
 
 alias vim=nvim
 alias vi=nvim
+alias vimdiff=nvim -d
 export EDITOR=nvim
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
