@@ -1,8 +1,8 @@
 [include]
     path = ~/.gitconfig-global
-[includeIf "gitdir:~/Projects/gitlab"]
+[includeIf "gitdir:~/Projects/gitlab/"]
     path = ~/.gitconfig-gitlab
-[includeIf "gitdir:~/Projects/github"]
+[includeIf "gitdir:~/Projects/github/"]
     path = ~/.gitconfig-github
 [includeIf "gitdir:~/Projects/work/"]
     path = ~/.gitconfig-work
