@@ -7,13 +7,6 @@ return {
       {
         mode = { 'n', 'v' },
         {
-          '<leader>b',
-          group = 'buffer',
-          expand = function()
-            return require('which-key.extras').expand.bxf()
-          end,
-        },
-        {
           '<leader>w',
           group = 'windows',
           proxy = '<c-w>',

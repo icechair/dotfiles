@@ -4,7 +4,7 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', '<leader>fq', vim.cmd.Ex, { desc = 'open folder of active buffer' })
 
 -- toggle whitespaces
-vim.keymap.set('n', '<leader>b', function()
+vim.keymap.set('n', '<leader>bb', function()
   vim.o.list = not vim.o.list
 end, { desc = 'toggle whitespaces' })
 -- clear on pressing <Esc> in normal mode
