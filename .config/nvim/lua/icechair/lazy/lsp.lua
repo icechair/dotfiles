@@ -68,7 +68,16 @@ return {
     local capabilities = vim.tbl_deep_extend('force', vim.lsp.protocol.make_client_capabilities(), cmp_lsp.default_capabilities())
 
     local servers = {
-      clangd = {},
+      clangd = {
+        cmd = {
+          'clangd',
+          '--background-index',
+          '--header-insertion=iwyu',
+          '--clang-tidy',
+          '--query-driver=/**/arm-none-eabig-g*,/**/bin/g*',
+        },
+      },
+      zls = {},
       cmake = {
         filetypes = { 'cmake', 'CMakeLists.txt' },
       },
