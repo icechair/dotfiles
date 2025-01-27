@@ -2,6 +2,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.keymap.set('n', '<leader>fq', vim.cmd.Ex, { desc = 'open folder of active buffer' })
+vim.keymap.set('v', '<leader>y', '"+y', { desc = '[y]ank to clipboard' })
+vim.keymap.set('n', '<leader>p', '"+p', { desc = '[p]aste from clipboard' })
 
 -- toggle whitespaces
 vim.keymap.set('n', '<leader>bb', function()
