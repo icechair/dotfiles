@@ -4,6 +4,7 @@ return {
   dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-treesitter/nvim-treesitter',
+    --    'github/copilot.vim',
   },
   config = function()
     local cc = require 'codecompanion'
@@ -17,7 +18,7 @@ return {
       },
       strategies = {
         chat = { adapter = 'deepseek' },
-        inline = { adapter = 'deepseek' },
+        --      inline = { adapter = 'copilot' },
         agent = { adapter = 'deepseek' },
       },
     }

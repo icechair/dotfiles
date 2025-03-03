@@ -68,6 +68,16 @@ return {
     local capabilities = vim.tbl_deep_extend('force', vim.lsp.protocol.make_client_capabilities(), cmp_lsp.default_capabilities())
 
     local servers = {
+      goimports = {},
+      gofumpt = {},
+      gopls = {
+        settings = {
+          gopls = {
+            gofumpt = true,
+            directoryFilters = { '-.git', '-.vscode', '-node_modules' },
+          },
+        },
+      },
       clangd = {
         cmd = {
           'clangd',
@@ -111,6 +121,8 @@ return {
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     require('mason-lspconfig').setup {
+      ensure_installed = {},
+      automatic_installation = {},
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
