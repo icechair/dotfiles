@@ -31,9 +31,11 @@ export PATH=$PATH:$HOME/.bin
 export PATH=$PATH:$HOME/go/bin
 
 [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/bash_completion
-source /usr/share/nvm/install-nvm-exec
+if [ -d "$NVM_DIR" ]; then
+    source /usr/share/nvm/nvm.sh
+    source /usr/share/nvm/bash_completion
+    source /usr/share/nvm/install-nvm-exec
+fi
 
 
 PICO_SDK_PATH=$HOME/pico/pico-sdk
@@ -54,4 +56,4 @@ if ! zplug check --verbose; then
     fi
 fi
 
-zplug load --verbose
+zplug load
