@@ -7,6 +7,8 @@ fi
 
 zshconf="${XDG_CONF_DIR:-$HOME/.config}/zsh"
 
+source ~/.zplug/init.zsh
+
 fpath=($zshconf/completions $fpath)
 # Source manjaro-zsh-configuration
 if [[ -e $zshconf/manjaro-zsh-config ]]; then
