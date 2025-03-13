@@ -14,7 +14,8 @@ fpath=($zshconf/completions $fpath)
 if [[ -e $zshconf/manjaro-zsh-config ]]; then
   source $zshconf/manjaro-zsh-config
 fi
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+#source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+zplug romkatv/powerlevel10k, as:theme, depth:1
 alias vim=nvim
 alias vi=nvim
 alias vimdiff=nvim -d
