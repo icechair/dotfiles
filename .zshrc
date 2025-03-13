@@ -29,6 +29,7 @@ export CPATH="$(clang -v 2>&1 | grep "Selected GCC installation" | rev | cut -d'
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.bin
 export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/.local/bin
 
 [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
 if [ -d "$NVM_DIR" ]; then
