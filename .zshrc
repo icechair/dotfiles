@@ -46,3 +46,12 @@ compdef _git dotfiles
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $zshconf/p10k.zsh ]] || source $zshconf/p10k.zsh
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+zplug load --verbose
