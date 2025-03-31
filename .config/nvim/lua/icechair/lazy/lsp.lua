@@ -68,6 +68,7 @@ return {
     local capabilities = vim.tbl_deep_extend('force', vim.lsp.protocol.make_client_capabilities(), cmp_lsp.default_capabilities())
 
     local servers = {
+      ts_ls = {},
       goimports = {},
       gofumpt = {},
       gopls = {
@@ -84,10 +85,12 @@ return {
           '--background-index',
           '--header-insertion=iwyu',
           '--clang-tidy',
-          '--query-driver=/**/arm-none-eabig-g*,/**/bin/g*',
+          --         '--query-driver=/**/arm-none-eabi-g*,/**/bin/g*,/**/riscv32-none-eabi-g*',
         },
       },
       zls = {},
+      pylsp = {},
+      pyright = {},
       cmake = {
         filetypes = { 'cmake', 'CMakeLists.txt' },
       },

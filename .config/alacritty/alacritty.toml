@@ -15,3 +15,8 @@ bindings = [
     {key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
     {key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
 ]
+
+[general]
+import = [
+    "~/.config/alacritty/themes/witchhazel/alacritty/witchhazel_hyper.toml"
+]
