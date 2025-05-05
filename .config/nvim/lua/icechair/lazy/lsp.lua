@@ -7,6 +7,7 @@ return {
     { 'j-hui/fidget.nvim', opts = {} },
     { 'folke/neodev.nvim', opts = {} },
   },
+  opts = { autoformat = false },
 
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {

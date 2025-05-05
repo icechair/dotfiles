@@ -17,6 +17,7 @@ vim.opt.undofile = true
 
 -- whitespaces
 vim.opt.list = false
+---@diagnostic disable-next-line: missing-fields
 vim.opt.listchars = { space = '␣', tab = '» ', trail = '·', nbsp = '‿', eol = '⮠' }
 
 -- truecolor
@@ -26,7 +27,8 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 -- signs in number column?
-vim.opt.signcolumn = 'number'
+-- vim.opt.signcolumn = 'number'
+vim.opt.signcolumn = 'yes'
 vim.opt.colorcolumn = '100'
 vim.opt.cursorline = true
 
